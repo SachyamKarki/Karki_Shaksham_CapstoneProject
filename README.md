@@ -19,6 +19,7 @@ login.html- Login and signup page
 styles.css - Main stylesheet
 product.html- All the used and home made products
 
+Since this is introductory college project , I have directly used paypal api for test integration. Do not try to access the api without proper consent of the developer. 
 
 Project by Shaksham Karki for Capstone project 
 Karki_Shaksham_CapstoneProject
