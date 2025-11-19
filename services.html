@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - ServiceHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>ServiceHub</h1>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact & Support</a></li>
+                    <li class="mobile-login"><a href="login.html" class="btn-login">Login/SignUp</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn-login">Login/SignUp</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Our Service Provider</h1>
+            <p>Meet our verified service providers and see what each one specializes in</p>
+        </div>
+    </section>
+
+    <section class="service-providers">
+        <div class="container">
+            <div class="providers-content">
+                <h2>Service Providers Directory</h2>
+                <p>Browse our verified service providers in a detailed table format</p>
+                
+                <div class="table-section">
+                    <div class="search-controls">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="searchInput" placeholder="Search providers, services, or locations...">
+                        </div>
+                        <div class="filter-controls">
+                            <select id="serviceFilter">
+                                <option value="">All Services</option>
+                                <option value="Carpenter">Carpenter</option>
+                                <option value="House Cleaner">House Cleaner</option>
+                                <option value="Handyman">Handyman</option>
+                                <option value="Laundry Specialist">Laundry Specialist</option>
+                            </select>
+                            <select id="availabilityFilter">
+                                <option value="">All Availability</option>
+                                <option value="Available">Available</option>
+                                <option value="Busy">Busy</option>
+                            </select>
+                            <select id="ratingFilter">
+                                <option value="">All Ratings</option>
+                                <option value="4.5+">4.5+ Stars</option>
+                                <option value="4.0+">4.0+ Stars</option>
+                            </select>
+                            <button id="clearFilters" class="btn-clear">Clear Filters</button>
+                        </div>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table class="providers-table">
+                            <thead>
+                                <tr>
+                                    <th>Provider</th>
+                                    <th>Service Type</th>
+                                    <th>Experience</th>
+                                    <th>Rating</th>
+                                    <th>Price Range</th>
+                                    <th>Availability</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="provider-cell">
+                                        <div class="provider-info">
+                                            <img src="" alt="Mike Tyson" class="provider-avatar-small">
+                                            <div class="provider-details">
+                                                <strong>Mike Tyson</strong>
+                                                <span class="provider-location">Downtown</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="service-type-cell">
+                                        <span class="service-badge">Carpenter</span>
+                                    </td>
+                                    <td class="experience-cell">8 years</td>
+                                    <td class="rating-cell">
+                                        <div class="rating-display">
+                                            <span class="stars">★★★★★</span>
+                                            <span class="rating-number">4.9</span>
+                                        </div>
+                                    </td>
+                                    <td class="price-cell">
+                                        <span class="price-range">$50-80/hr</span>
+                                    </td>
+                                    <td class="availability-cell">
+                                        <span class="status available">Available</span>
+                                    </td>
+                                    <td class="actions-cell">
+                                        <button class="btn-book">Book Now</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="provider-cell">
+                                        <div class="provider-info">
+                                            <img src="" alt="John Simson" class="provider-avatar-small">
+                                            <div class="provider-details">
+                                                <strong>John Simson</strong>
+                                                <span class="provider-location">Westside</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="service-type-cell">
+                                        <span class="service-badge">House Cleaner</span>
+                                    </td>
+                                    <td class="experience-cell">5 years</td>
+                                    <td class="rating-cell">
+                                        <div class="rating-display">
+                                            <span class="stars">★★★★★</span>
+                                            <span class="rating-number">4.8</span>
+                                        </div>
+                                    </td>
+                                    <td class="price-cell">
+                                        <span class="price-range">$25-40/hr</span>
+                                    </td>
+                                    <td class="availability-cell">
+                                        <span class="status available">Available</span>
+                                    </td>
+                                    <td class="actions-cell">
+                                        <button class="btn-book">Book Now</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="provider-cell">
+                                        <div class="provider-info">
+                                            <img src="" alt="Shaksham Karki" class="provider-avatar-small">
+                                            <div class="provider-details">
+                                                <strong>Shaksham Karki</strong>
+                                                <span class="provider-location">Eastside</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="service-type-cell">
+                                        <span class="service-badge">Handyman</span>
+                                    </td>
+                                    <td class="experience-cell">12 years</td>
+                                    <td class="rating-cell">
+                                        <div class="rating-display">
+                                            <span class="stars">★★★★★</span>
+                                            <span class="rating-number">4.9</span>
+                                        </div>
+                                    </td>
+                                    <td class="price-cell">
+                                        <span class="price-range">$60-100/hr</span>
+                                    </td>
+                                    <td class="availability-cell">
+                                        <span class="status busy">Busy</span>
+                                    </td>
+                                    <td class="actions-cell">
+                                        <button class="btn-book">Book Now</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="provider-cell">
+                                        <div class="provider-info">
+                                            <img src="" alt="Sameer Kholi" class="provider-avatar-small">
+                                            <div class="provider-details">
+                                                <strong>Sameer Kholi</strong>
+                                                <span class="provider-location">Northside</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="service-type-cell">
+                                        <span class="service-badge">Laundry Specialist</span>
+                                    </td>
+                                    <td class="experience-cell">6 years</td>
+                                    <td class="rating-cell">
+                                        <div class="rating-display">
+                                            <span class="stars">★★★★☆</span>
+                                            <span class="rating-number">4.7</span>
+                                        </div>
+                                    </td>
+                                    <td class="price-cell">
+                                        <span class="price-range">$15-25/load</span>
+                                    </td>
+                                    <td class="availability-cell">
+                                        <span class="status available">Available</span>
+                                    </td>
+                                    <td class="actions-cell">
+                                        <button class="btn-book">Book Now</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="results-summary">
+                        <p id="resultsCount">Showing 4 service providers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ServiceHub</h3>
+                    <p>Connecting you with trusted service providers.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>Service Center Phone: (770) 555-0123</p>
+                    <p>Service Center Location: 123 Service Street<br>Carrollton, Georgia 30117</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>ServiceHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        var button = document.querySelector('.menu-toggle');
+        var menu = document.querySelector('.nav');
+        
+        button.onclick = function() {
+            var hasActive = menu.classList.contains('active');
+            
+            if (hasActive == true) {
+                menu.classList.remove('active');
+            } else {
+                menu.classList.add('active');
+            }
+        };
+    </script>
+</body>
+</html>

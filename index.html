@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - ServiceHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>ServiceHub</h1>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact & Support</a></li>
+                    <li class="mobile-login"><a href="login.html" class="btn-login">Login/SignUp</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn-login">Login/SignUp</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Find Trusted Service Providers</h1>
+                <p>Connect with verified professionals for all your home and personal service needs.</p>
+                <div class="hero-buttons">
+                    <a href="services.html" class="btn-primary">Browse Services</a>
+                    <a href="provider-signup.html" class="btn-secondary">Join as Provider</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card" onclick="toggleServiceDetails('carpentry')">
+                    <h3>Carpentry</h3>
+                </div>
+                <div class="service-card" onclick="toggleServiceDetails('cleaning')">
+                    <h3>Cleaning</h3>
+                </div>
+                <div class="service-card" onclick="toggleServiceDetails('laundry')">
+                    <h3>Laundry</h3>
+                </div>
+                <div class="service-card" onclick="toggleServiceDetails('childcare')">
+                    <h3>Childcare</h3>
+                </div>
+                <div class="service-card" onclick="toggleServiceDetails('gardening')">
+                    <h3>Gardening & Lawn Care</h3>
+                </div>
+                <div class="service-card" onclick="toggleServiceDetails('repairs')">
+                    <h3>Home Repairs</h3>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="container">
+            <h2>What We Do ?</h2>
+            <div class="gallery">
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="media/video1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <details>
+                        <summary>Learn More About This Service</summary>
+                        <p>This video showcases our service of lawn care and maintenance where one of our service provider is showing an example of lawning the grass.</p>
+                    </details>
+                </div>
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="media/video2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <details>
+                        <summary>Learn More About This Service</summary>
+                        <p>This video demonstrates our  carpentry assistance service.The person is showing what we can provide to our client with service related to carpentry and construction.</p>
+                        
+                    </details>
+                </div>
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="media/video3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <details>
+                        <summary>Learn More About This Service</summary>
+                        <p>This video highlights our service of taking care of young childrens in the community. The example in this videos shows how your neighbour can be your children's next nanny and next tutor.</p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="customAlert" class="custom-alert">
+        <div class="alert-content">
+            <span class="close-alert" onclick="closeAlert()">&times;</span>
+            <div id="alertMessage"></div>
+            <button class="alert-button" onclick="closeAlert()">OK</button>
+        </div>
+    </div>
+
+    <section class="about-section">
+        <div class="container">
+            <h2>About ServiceHub</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>ServiceHub was founded with a simple mission: to make it easy for people to find and connect with trusted service providers in their community. We believe that everyone deserves access to reliable, professional services for their home and personal needs.</p>
+                    
+                    <p>Our platform connects customers with verified service providers, ensuring quality, safety, and satisfaction for all parties involved. We've built a community where trust and excellence are the foundation of every interaction.</p>
+                </div>
+                <div class="about-values">
+                    <div class="value-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Trust & Safety</h4>
+                        <p>All our service providers are thoroughly vetted and verified</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-star"></i>
+                        <h4>Quality Service</h4>
+                        <p>We maintain high standards and only work with professionals</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-users"></i>
+                        <h4>Community Focus</h4>
+                        <p>We're committed to supporting local businesses</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        function toggleServiceDetails(serviceType) {
+            var message = "";
+            
+            if (serviceType == "carpentry") {
+                message = "Carpentry Services\n\n";
+                message = message + "Professional woodworking and furniture repair services\n\n";
+                message = message + "What We Offer:\n";
+                message = message + "- Custom furniture design and construction\n";
+                message = message + "- Furniture repair and restoration\n";
+                message = message + "- Cabinet installation and repair\n";
+                message = message + "- Wood flooring installation\n";
+                message = message + "- Custom shelving and storage solutions\n";
+                message = message + "- Door and window frame repair";
+            } else if (serviceType == "cleaning") {
+                message = "Cleaning Services\n\n";
+                message = message + "House cleaning, deep cleaning, and maintenance services\n\n";
+                message = message + "What We Offer:\n";
+                message = message + "- Regular house cleaning\n";
+                message = message + "- Deep cleaning services\n";
+                message = message + "- Office and commercial cleaning\n";
+                message = message + "- Move-in/out cleaning\n";
+                message = message + "- Post-construction cleanup\n";
+                message = message + "- Carpet and upholstery cleaning";
+            } else if (serviceType == "laundry") {
+                message = "Laundry Services\n\n";
+                message = message + "Wash, dry, and fold services for your convenience\n\n";
+                message = message + "What We Offer:\n";
+                message = message + "- Wash and fold service\n";
+                message = message + "- Dry cleaning\n";
+                message = message + "- Pickup and delivery\n";
+                message = message + "- Specialty fabric care\n";
+                message = message + "- Ironing and pressing\n";
+                message = message + "- Bulk laundry service";
+            } else if (serviceType == "childcare") {
+                message = "Childcare Services\n\n";
+                message = message + "Trusted babysitting and childcare services\n\n";
+                message = message + "What We Offer:\n";
+                message = message + "- Babysitting services\n";
+                message = message + "- Nanny services\n";
+                message = message + "- After-school care\n";
+                message = message + "- Emergency childcare\n";
+                message = message + "- Overnight care\n";
+                message = message + "- Special needs care";
+            } else if (serviceType == "gardening") {
+                message = "Gardening & Lawn Care\n\n";
+                message = message + "Professional landscaping and lawn maintenance\n\n";
+                message = message + "What We Offer:\n";
+                message = message + "- Lawn mowing and maintenance\n";
+                message = message + "- Garden design and planting\n";
+                message = message + "- Tree and shrub care\n";
+                message = message + "- Seasonal cleanup\n";
+                message = message + "- Irrigation system maintenance\n";
+                message = message + "- Pest and disease control";
+            } else if (serviceType == "repairs") {
+                message = "Home Repairs\n\n";
+                message = message + "General home maintenance and repair services\n\n";
+                message = message + "What We Offer:\n";
+                message = message + "- Plumbing repairs\n";
+                message = message + "- Electrical work\n";
+                message = message + "- Painting services\n";
+                message = message + "- General maintenance\n";
+                message = message + "- Appliance repair\n";
+                message = message + "- HVAC maintenance";
+            }
+            
+            showAlert(message);
+        }
+        
+        function showAlert(message) {
+            var alertBox = document.getElementById('customAlert');
+            var messageDiv = document.getElementById('alertMessage');
+            
+            var htmlMessage = "";
+            var i;
+            for (i = 0; i < message.length; i++) {
+                if (message[i] == '\n') {
+                    htmlMessage = htmlMessage + '<br>';
+                } else {
+                    htmlMessage = htmlMessage + message[i];
+                }
+            }
+            
+            messageDiv.innerHTML = htmlMessage;
+            alertBox.style.display = 'flex';
+        }
+        
+        function closeAlert() {
+            var alertBox = document.getElementById('customAlert');
+            alertBox.style.display = 'none';
+        }
+    </script>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ServiceHub</h3>
+                    <p>Connecting you with trusted service providers.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>ServiceHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        var button = document.querySelector('.menu-toggle');
+        var menu = document.querySelector('.nav');
+        
+        button.onclick = function() {
+            var hasActive = menu.classList.contains('active');
+            
+            if (hasActive == true) {
+                menu.classList.remove('active');
+            } else {
+                menu.classList.add('active');
+            }
+        };
+    </script>
+</body>
+</html>

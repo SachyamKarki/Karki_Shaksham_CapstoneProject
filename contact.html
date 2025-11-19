@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Support - ServiceHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>ServiceHub</h1>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html" class="active">Contact & Support</a></li>
+                    <li class="mobile-login"><a href="login.html" class="btn-login">Login/SignUp</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn-login">Login/SignUp</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Contact & Support</h1>
+            <p>Get in touch with us for any questions or support needs</p>
+        </div>
+    </section>
+
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+
+                <div class="contact-form">
+                    <h2>Send us a Message</h2>
+                    <form method="post" action="https://webdevbasics.net/scripts/demo.php">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a topic</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="support">Technical Support</option>
+                                    <option value="billing">Billing Question</option>
+                                    <option value="provider">Become a Provider</option>
+                                    <option value="complaint">Complaint</option>
+                                    <option value="booking">Service Booking</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Service Type (if applicable)</label>
+                            <div class="service-type-options">
+                                <label><input type="checkbox" name="service_type[]" value="carpentry"> Carpentry</label>
+                                <label><input type="checkbox" name="service_type[]" value="cleaning"> Cleaning</label>
+                                <label><input type="checkbox" name="service_type[]" value="laundry"> Laundry</label>
+                                <label><input type="checkbox" name="service_type[]" value="childcare"> Childcare</label>
+                                <label><input type="checkbox" name="service_type[]" value="gardening"> Gardening</label>
+                                <label><input type="checkbox" name="service_type[]" value="repairs"> Home Repairs</label>
+                                <label><input type="checkbox" name="service_type[]" value="other"> Other</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Please provide details about your inquiry..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label required">
+                                <input type="checkbox" name="terms" value="accepted" required>
+                                <span class="checkbox-custom"></span>
+                                <span class="terms-text">
+                                    I agree to the <a href="#" class="terms-link">Terms of Service</a> and <a href="#" class="terms-link">Privacy Policy</a> *
+                                </span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn-primary full-width">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="contact-details-section">
+                <h2>Contact Information</h2>
+                <div class="contact-details-grid">
+                    <div class="contact-detail-item">
+                        <div class="contact-detail-header">
+                            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone" style="width: 24px; height: 24px;">
+                            <h3>Phone</h3>
+                        </div>
+                        <div class="contact-detail-content">
+                            <p class="contact-detail-main">(443) 780-6066</p>
+                            <p class="contact-detail-sub">Mon-Fri: 8AM-8PM EST</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail-item">
+                        <div class="contact-detail-header">
+                            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" style="width: 24px; height: 24px;">
+                            <h3>Email</h3>
+                        </div>
+                        <div class="contact-detail-content">
+                            <p class="contact-detail-main">support@servicehub.com</p>
+                            <p class="contact-detail-sub">We respond within 24 hours</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail-item">
+                        <div class="contact-detail-header">
+                            <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Location" style="width: 24px; height: 24px;">
+                            <h3>Location</h3>
+                        </div>
+                        <div class="contact-detail-content">
+                            <p class="contact-detail-main">123 Service Street</p>
+                            <p class="contact-detail-sub">Carrollton, Georgia 30117</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="support-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq1" class="faq-toggle">
+                        <label for="faq1" class="faq-header">
+                            <h3>How do I book a service?</h3>
+                            <span class="faq-icon">+</span>
+                        </label>
+                        <div class="faq-content">
+                            <p>Simply browse our services, select the one you need, and book directly through our platform. You'll be connected with verified providers in your area.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq2" class="faq-toggle">
+                        <label for="faq2" class="faq-header">
+                            <h3>Are all providers verified?</h3>
+                            <span class="faq-icon">+</span>
+                        </label>
+                        <div class="faq-content">
+                            <p>Yes! All our service providers go through a thorough verification process including background checks, insurance verification, and skill assessments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ServiceHub</h3>
+                    <p>Connecting you with trusted service providers.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>ServiceHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        var button = document.querySelector('.menu-toggle');
+        var menu = document.querySelector('.nav');
+        
+        button.onclick = function() {
+            var hasActive = menu.classList.contains('active');
+            
+            if (hasActive == true) {
+                menu.classList.remove('active');
+            } else {
+                menu.classList.add('active');
+            }
+        };
+    </script>
+</body>
+</html>

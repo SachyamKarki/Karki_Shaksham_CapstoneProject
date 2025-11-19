@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - ServiceHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>ServiceHub</h1>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="contact.html">Contact & Support</a></li>
+                    <li class="mobile-login"><a href="login.html" class="btn-login">Login/SignUp</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn-login">Login/SignUp</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>About ServiceHub</h1>
+            <p>Connecting you with trusted service providers in your community</p>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Mission</h2>
+                    <p>ServiceHub has a mission to conenct all the people in a community or neighbouhhood with their skilled neighbour to help them compelte their hoisehold work while also getitng some pay back for that </p>
+                    
+                    <h2>What We Do</h2>
+                    <p>Our platform conenct service seeker with service provider who are willing to provide freelancing service for the task they know 
+                    <h2>Why Choose ServiceHub</h2>
+                    <p>All our service providers are thoroughly vetted and verified. We maintain high standards and only work with professionals who are committed to delivering exceptional service. We're dedicated to supporting local businesses and building strong community connections.</p>
+                </div>
+                
+                <div class="about-values">
+                    <div class="value-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Trust & Safety</h3>
+                        <p>All our service providers are thoroughly vetted and verified</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-star"></i>
+                        <h3>Quality Service</h3>
+                        <p>We maintain high standards and only work with professionals</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-users"></i>
+                        <h3>Community Focus</h3>
+                        <p>We're committed to supporting local businesses</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ServiceHub</h3>
+                    <p>Connecting you with trusted service providers.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>ServiceHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        var button = document.querySelector('.menu-toggle');
+        var menu = document.querySelector('.nav');
+        
+        button.onclick = function() {
+            var hasActive = menu.classList.contains('active');
+            
+            if (hasActive == true) {
+                menu.classList.remove('active');
+            } else {
+                menu.classList.add('active');
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - ServiceHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://www.paypal.com/sdk/js?client-id=Ac60X7vru8h05YN3Ju0fjmLr3QJPdHW92ONec1EFd3O8qwaHjVp_rgVN6-l8jcmMnyxjCJG68WgqazQx&currency=USD"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>ServiceHub</h1>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact & Support</a></li>
+                    <li class="mobile-login"><a href="login.html" class="btn-login">Login/SignUp</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn-login">Login/SignUp</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Used & Homemade Products</h1>
+            <p>Browse pre-owned tools and homemade items from your community</p>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/image1.jpg" alt="Used Garden Shovel">
+                    </div>
+                    <div class="product-info">
+                        <h3>Used Garden Shovel</h3>
+                        <p>Heavy-duty steel shovel, well-maintained, used only for 6 months. Perfect for gardening and landscaping projects. Some minor scratches but fully functional.</p>
+                        <div class="product-price">$12.99</div>
+                        <div class="product-condition">Condition: Good - Used</div>
+                        <div id="paypal-button-container-shovel"></div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/image2.jpg" alt="Used Gardening Tools Set">
+                    </div>
+                    <div class="product-info">
+                        <h3>Used Gardening Tools Set</h3>
+                        <p>Complete set of used gardening tools including trowel, pruners, and hand rake. All tools are in working condition just selling because we got a new one.</p>
+                        <div class="product-price">$18.50</div>
+                        <div class="product-condition">Condition: Good - Used</div>
+                        <div id="paypal-button-container-gardening"></div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/image3.jpg" alt="Used Hammer & Tool Set">
+                    </div>
+                    <div class="product-info">
+                        <h3>Used Hammer & Tool Set</h3>
+                        <p>Pre-owned hammer with a few basic tools. Great for small home repairs.Selling out because I got another one.</p>
+                        <div class="product-price">$15.00</div>
+                        <div class="product-condition">Condition: Fair - Used</div>
+                        <div id="paypal-button-container-hammer"></div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/image4.jpg" alt="Used Broom & Mop Set">
+                    </div>
+                    <div class="product-info">
+                        <h3>Used Broom & Mop Set</h3>
+                        <p>Cleaning supplies from a neighbor. Broom and mop are still in good condition, just cleaned and ready to use.</p>
+                        <div class="product-price">$8.99</div>
+                        <div class="product-condition">Condition: Good - Used</div>
+                        <div id="paypal-button-container-broom"></div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/image5.jpg" alt="Used Paint Brushes">
+                    </div>
+                    <div class="product-info">
+                        <h3>Used Paint Brushes</h3>
+                        <p>Paint brushes in various sizes. Paint brushes are of my son and just selling it out becuase he went to college and we dont want it anymore.</p>
+                        <div class="product-price">$6.50</div>
+                        <div class="product-condition">Condition: Good - Used</div>
+                        <div id="paypal-button-container-paint"></div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/image6.jpg" alt="Homemade Cleaning Solution">
+                    </div>
+                    <div class="product-info">
+                        <h3>Homemade Cleaning Solution</h3>
+                        <p>Eco-friendly cleaning solution made locally by your neigbour. Natural ingredients, great for all kinds of surfaces.</p>
+                        <div class="product-price">$5.99</div>
+                        <div class="product-condition">Condition: New - Homemade</div>
+                        <div id="paypal-button-container-cleaning"></div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/image7.jpg" alt="Used Wrench Set">
+                    </div>
+                    <div class="product-info">
+                        <h3>Used Wrench Set</h3>
+                        <p>Set of used wrenches in various sizes. Perfect for plumbing and repair work. All wrenches are functional.</p>
+                        <div class="product-price">$14.99</div>
+                        <div class="product-condition">Condition: Good - Used</div>
+                        <div id="paypal-button-container-wrench"></div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/image8.jpg" alt="Homemade Plant Fertilizer">
+                    </div>
+                    <div class="product-info">
+                        <h3>Homemade Plant Fertilizer</h3>
+                        <p>Organic plant fertilizer made from kitchen scraps. Great for gardens and houseplants. I made it myself and its very effective.</p>
+                        <div class="product-price">$4.99</div>
+                        <div class="product-condition">Condition: New - Homemade</div>
+                        <div id="paypal-button-container-fertilizer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ServiceHub</h3>
+                    <p>Connecting you with trusted service providers.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>ServiceHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '12.99'
+                        },
+                        description: 'Used Garden Shovel'
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            }
+        }).render('#paypal-button-container-shovel');
+
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '18.50'
+                        },
+                        description: 'Used Gardening Tools Set'
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            }
+        }).render('#paypal-button-container-gardening');
+
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '15.00'
+                        },
+                        description: 'Used Hammer & Tool Set'
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            }
+        }).render('#paypal-button-container-hammer');
+
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '8.99'
+                        },
+                        description: 'Used Broom & Mop Set'
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            }
+        }).render('#paypal-button-container-broom');
+
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '6.50'
+                        },
+                        description: 'Used Paint Brushes'
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            }
+        }).render('#paypal-button-container-paint');
+
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '5.99'
+                        },
+                        description: 'Homemade Cleaning Solution'
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            }
+        }).render('#paypal-button-container-cleaning');
+
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '14.99'
+                        },
+                        description: 'Used Wrench Set'
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            }
+        }).render('#paypal-button-container-wrench');
+
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '4.99'
+                        },
+                        description: 'Homemade Plant Fertilizer'
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            }
+        }).render('#paypal-button-container-fertilizer');
+
+        var button = document.querySelector('.menu-toggle');
+        var menu = document.querySelector('.nav');
+        
+        button.onclick = function() {
+            var hasActive = menu.classList.contains('active');
+            
+            if (hasActive == true) {
+                menu.classList.remove('active');
+            } else {
+                menu.classList.add('active');
+            }
+        };
+    </script>
+</body>
+</html>
+
