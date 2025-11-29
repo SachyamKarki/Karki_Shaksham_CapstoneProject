@@ -51,22 +51,22 @@
         <div class="container">
             <h2>Our Services</h2>
             <div class="services-grid">
-                <div class="service-card" onclick="toggleServiceDetails('carpentry')">
+                <div class="service-card" onmouseover="toggleServiceDetails('carpentry')">
                     <h3>Carpentry</h3>
                 </div>
-                <div class="service-card" onclick="toggleServiceDetails('cleaning')">
+                <div class="service-card" onmouseover="toggleServiceDetails('cleaning')">
                     <h3>Cleaning</h3>
                 </div>
-                <div class="service-card" onclick="toggleServiceDetails('laundry')">
+                <div class="service-card" onmouseover="toggleServiceDetails('laundry')">
                     <h3>Laundry</h3>
                 </div>
-                <div class="service-card" onclick="toggleServiceDetails('childcare')">
+                <div class="service-card" onmouseover="toggleServiceDetails('childcare')">
                     <h3>Childcare</h3>
                 </div>
-                <div class="service-card" onclick="toggleServiceDetails('gardening')">
+                <div class="service-card" onmouseover="toggleServiceDetails('gardening')">
                     <h3>Gardening & Lawn Care</h3>
                 </div>
-                <div class="service-card" onclick="toggleServiceDetails('repairs')">
+                <div class="service-card" onmouseover="toggleServiceDetails('repairs')">
                     <h3>Home Repairs</h3>
                 </div>
             </div>
@@ -113,14 +113,6 @@
         </div>
     </section>
 
-    <div id="customAlert" class="custom-alert">
-        <div class="alert-content">
-            <span class="close-alert" onclick="closeAlert()">&times;</span>
-            <div id="alertMessage"></div>
-            <button class="alert-button" onclick="closeAlert()">OK</button>
-        </div>
-    </div>
-
     <section class="about-section">
         <div class="container">
             <h2>About ServiceHub</h2>
@@ -154,95 +146,25 @@
 
 
     <script>
+        
         function toggleServiceDetails(serviceType) {
             var message = "";
-            
+
             if (serviceType == "carpentry") {
-                message = "Carpentry Services\n\n";
-                message = message + "Professional woodworking and furniture repair services\n\n";
-                message = message + "What We Offer:\n";
-                message = message + "- Custom furniture design and construction\n";
-                message = message + "- Furniture repair and restoration\n";
-                message = message + "- Cabinet installation and repair\n";
-                message = message + "- Wood flooring installation\n";
-                message = message + "- Custom shelving and storage solutions\n";
-                message = message + "- Door and window frame repair";
+                message = "Carpentry: Need help with furniture or repairs? Local pros are ready to help.";
             } else if (serviceType == "cleaning") {
-                message = "Cleaning Services\n\n";
-                message = message + "House cleaning, deep cleaning, and maintenance services\n\n";
-                message = message + "What We Offer:\n";
-                message = message + "- Regular house cleaning\n";
-                message = message + "- Deep cleaning services\n";
-                message = message + "- Office and commercial cleaning\n";
-                message = message + "- Move-in/out cleaning\n";
-                message = message + "- Post-construction cleanup\n";
-                message = message + "- Carpet and upholstery cleaning";
+                message = "Cleaning: Book a trusted cleaner and come home to a fresh space.";
             } else if (serviceType == "laundry") {
-                message = "Laundry Services\n\n";
-                message = message + "Wash, dry, and fold services for your convenience\n\n";
-                message = message + "What We Offer:\n";
-                message = message + "- Wash and fold service\n";
-                message = message + "- Dry cleaning\n";
-                message = message + "- Pickup and delivery\n";
-                message = message + "- Specialty fabric care\n";
-                message = message + "- Ironing and pressing\n";
-                message = message + "- Bulk laundry service";
+                message = "Laundry: Too many clothes to wash? Let a neighbor handle it for you.";
             } else if (serviceType == "childcare") {
-                message = "Childcare Services\n\n";
-                message = message + "Trusted babysitting and childcare services\n\n";
-                message = message + "What We Offer:\n";
-                message = message + "- Babysitting services\n";
-                message = message + "- Nanny services\n";
-                message = message + "- After-school care\n";
-                message = message + "- Emergency childcare\n";
-                message = message + "- Overnight care\n";
-                message = message + "- Special needs care";
+                message = "Childcare: Connect with caring sitters and nannies in your area.";
             } else if (serviceType == "gardening") {
-                message = "Gardening & Lawn Care\n\n";
-                message = message + "Professional landscaping and lawn maintenance\n\n";
-                message = message + "What We Offer:\n";
-                message = message + "- Lawn mowing and maintenance\n";
-                message = message + "- Garden design and planting\n";
-                message = message + "- Tree and shrub care\n";
-                message = message + "- Seasonal cleanup\n";
-                message = message + "- Irrigation system maintenance\n";
-                message = message + "- Pest and disease control";
+                message = "Gardening: From mowing to planting, we help keep your yard looking great.";
             } else if (serviceType == "repairs") {
-                message = "Home Repairs\n\n";
-                message = message + "General home maintenance and repair services\n\n";
-                message = message + "What We Offer:\n";
-                message = message + "- Plumbing repairs\n";
-                message = message + "- Electrical work\n";
-                message = message + "- Painting services\n";
-                message = message + "- General maintenance\n";
-                message = message + "- Appliance repair\n";
-                message = message + "- HVAC maintenance";
+                message = "Home Repairs: Find reliable help for small fixes and bigger projects.";
             }
-            
-            showAlert(message);
-        }
-        
-        function showAlert(message) {
-            var alertBox = document.getElementById('customAlert');
-            var messageDiv = document.getElementById('alertMessage');
-            
-            var htmlMessage = "";
-            var i;
-            for (i = 0; i < message.length; i++) {
-                if (message[i] == '\n') {
-                    htmlMessage = htmlMessage + '<br>';
-                } else {
-                    htmlMessage = htmlMessage + message[i];
-                }
-            }
-            
-            messageDiv.innerHTML = htmlMessage;
-            alertBox.style.display = 'flex';
-        }
-        
-        function closeAlert() {
-            var alertBox = document.getElementById('customAlert');
-            alertBox.style.display = 'none';
+
+            alert(message);
         }
     </script>
 

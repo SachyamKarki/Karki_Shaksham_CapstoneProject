@@ -47,7 +47,7 @@
 
                 <div class="contact-form">
                     <h2>Send us a Message</h2>
-                    <form method="post" action="https://webdevbasics.net/scripts/demo.php">
+                    <form id="contactForm" method="post" action="https://webdevbasics.net/scripts/demo.php">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Full Name *</label>
@@ -222,6 +222,24 @@
                 menu.classList.add('active');
             }
         };
+
+        var contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(event) {
+                var nameInput = document.getElementById('name');
+                var emailInput = document.getElementById('email');
+                var messageInput = document.getElementById('message');
+
+                var nameValue = nameInput.value.trim();
+                var emailValue = emailInput.value.trim();
+                var messageValue = messageInput.value.trim();
+
+                if (nameValue === "" || emailValue === "" || messageValue.length < 10) {
+                    alert("Please enter your name, email, and a message with at least 10 characters.");
+                    event.preventDefault();
+                }
+            });
+        }
     </script>
 </body>
 </html>
